@@ -39,6 +39,7 @@
             this.xml_Export = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.messageBox = new System.Windows.Forms.Label();
+            this.curveHeader = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.curveGridView)).BeginInit();
             this.SuspendLayout();
@@ -142,11 +143,22 @@
             this.messageBox.Size = new System.Drawing.Size(0, 20);
             this.messageBox.TabIndex = 11;
             // 
+            // curveHeader
+            // 
+            this.curveHeader.Location = new System.Drawing.Point(971, 170);
+            this.curveHeader.Name = "curveHeader";
+            this.curveHeader.Size = new System.Drawing.Size(99, 52);
+            this.curveHeader.TabIndex = 12;
+            this.curveHeader.Text = "Refresh Header";
+            this.curveHeader.UseVisualStyleBackColor = true;
+            this.curveHeader.Click += new System.EventHandler(this.curveHeader_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 636);
+            this.Controls.Add(this.curveHeader);
             this.Controls.Add(this.messageBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.xml_Export);
@@ -180,6 +192,7 @@
         private System.Windows.Forms.Button xml_Export;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label messageBox;
+        private System.Windows.Forms.Button curveHeader;
     }
 }
 

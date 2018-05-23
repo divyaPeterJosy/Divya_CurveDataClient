@@ -28,8 +28,7 @@ namespace PetroClient
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            StartConnection();
-            label1.Text = "Client Socket Program - Server Connected ...";
+            StartConnection();            
             List<string> curveHeader = GetResponse("CurveHeader").Split(',').ToList();
             GenerateDynamicCheckbox(curveHeader);
             messageBox.ForeColor = Color.Red;
@@ -83,13 +82,13 @@ namespace PetroClient
             }
             else
             {
-                if(clientSocket !=null && !clientSocket.Connected)
-                {                    
-                    messageBox.Text = "Please start the connection";
+                if(clientSocket !=null || clientSocket.Connected)
+                {
+                    messageBox.Text = "Please select any curve for dispaying data";                   
                 }
                 else
                 {
-                    messageBox.Text = "Please select any curve for dispaying data";
+                    messageBox.Text = "Please start the connection";
                 }                
             }            
         }
@@ -127,6 +126,24 @@ namespace PetroClient
             }
         }
 
+        /// <summary>
+        /// to refresh check box 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void curveHeader_Click(object sender, EventArgs e)
+        {
+            if (clientSocket != null && clientSocket.Connected)
+            {
+                List<string> curveHeader = GetResponse("CurveHeader").Split(',').ToList();
+                GenerateDynamicCheckbox(curveHeader);
+            }
+            else
+            {
+                messageBox.Text = "Please start the server";
+            }
+            
+        }
 
         /// <summary>
         /// To export grid data to xml file
@@ -314,8 +331,15 @@ namespace PetroClient
         /// </summary>
         private void StartConnection()
         {
-            clientSocket = new System.Net.Sockets.TcpClient();
-            clientSocket.Connect("127.0.0.1", 7633);
+            try
+            {
+                clientSocket = new System.Net.Sockets.TcpClient();
+                clientSocket.Connect("127.0.0.1", 7633);
+            }
+            catch(Exception ex)
+            {
+                messageBox.Text = "Please start the server";
+            }            
         }
 
         /// <summary>
@@ -359,5 +383,6 @@ namespace PetroClient
             writer.WriteEndElement();
         }
 
+        
     }
 }
