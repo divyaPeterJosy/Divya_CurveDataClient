@@ -1,0 +1,10 @@
+c:\users\hp\source\repos\PetroClient\PetroClient\bin\Debug\PetroClient.exe.config
+c:\users\hp\source\repos\PetroClient\PetroClient\bin\Debug\PetroClient.exe
+c:\users\hp\source\repos\PetroClient\PetroClient\bin\Debug\PetroClient.pdb
+c:\users\hp\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.csprojAssemblyReference.cache
+c:\users\hp\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.Form1.resources
+c:\users\hp\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.Properties.Resources.resources
+c:\users\hp\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.csproj.GenerateResource.cache
+c:\users\hp\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.csproj.CoreCompileInputs.cache
+c:\users\hp\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.exe
+c:\users\hp\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.pdb
