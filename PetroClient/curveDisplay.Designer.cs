@@ -1,6 +1,6 @@
 ﻿namespace PetroClient
 {
-    partial class Form1
+    partial class curveDisplay
     {
         /// <summary>
         /// Required designer variable.
@@ -153,7 +153,7 @@
             this.curveHeader.UseVisualStyleBackColor = true;
             this.curveHeader.Click += new System.EventHandler(this.curveHeader_Click);
             // 
-            // Form1
+            // curveDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -169,8 +169,8 @@
             this.Controls.Add(this.submit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "curveDisplay";
+            this.Text = "Curve DashBoard";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.curveGridView)).EndInit();

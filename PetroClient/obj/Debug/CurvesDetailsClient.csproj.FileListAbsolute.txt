@@ -2,9 +2,9 @@ C:\Users\HP\source\repos\PetroClient\PetroClient\bin\Debug\PetroClient.exe.confi
 C:\Users\HP\source\repos\PetroClient\PetroClient\bin\Debug\PetroClient.exe
 C:\Users\HP\source\repos\PetroClient\PetroClient\bin\Debug\PetroClient.pdb
 C:\Users\HP\source\repos\PetroClient\PetroClient\obj\Debug\CurvesDetailsClient.csprojAssemblyReference.cache
-C:\Users\HP\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.Form1.resources
 C:\Users\HP\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.Properties.Resources.resources
 C:\Users\HP\source\repos\PetroClient\PetroClient\obj\Debug\CurvesDetailsClient.csproj.GenerateResource.cache
 C:\Users\HP\source\repos\PetroClient\PetroClient\obj\Debug\CurvesDetailsClient.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.exe
 C:\Users\HP\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.pdb
+C:\Users\HP\source\repos\PetroClient\PetroClient\obj\Debug\PetroClient.curveDisplay.resources

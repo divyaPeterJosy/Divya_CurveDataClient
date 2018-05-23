@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -15,13 +16,13 @@ using System.Xml;
 
 namespace PetroClient
 {
-    public partial class Form1 : Form
+    public partial class curveDisplay : Form
     {
         System.Net.Sockets.TcpClient clientSocket;
         IPAddress ip = Dns.GetHostEntry("localhost").AddressList[0];
         CancellationTokenSource tokenSource;
 
-        public Form1()
+        public curveDisplay()
         {            
             InitializeComponent();
         }
@@ -122,6 +123,7 @@ namespace PetroClient
         {
             if (clientSocket != null && !clientSocket.Connected)
             {
+                messageBox.Text = "";
                 StartConnection();                
             }
         }
@@ -140,7 +142,7 @@ namespace PetroClient
             }
             else
             {
-                messageBox.Text = "Please start the server";
+                messageBox.Text = "Please start the server first and click Start Connection button";
             }
             
         }
@@ -154,8 +156,13 @@ namespace PetroClient
         {
             if(curveGridView != null && curveGridView.Columns.Count > 0 && curveGridView.Rows.Count >0)
             {
+                string curveXmlPath = @"D:\XMLCurve\";
+                if (!Directory.Exists(curveXmlPath))
+                {
+                    Directory.CreateDirectory(curveXmlPath);
+                }      
 
-                XmlTextWriter writer = new XmlTextWriter(@"D:\Study\Curves.xml", System.Text.Encoding.UTF8);
+                XmlTextWriter writer = new XmlTextWriter(curveXmlPath + "Curves.xml", System.Text.Encoding.UTF8);
                 writer.WriteStartDocument(true);
                 writer.Formatting = Formatting.Indented;
                 writer.Indentation = 2;
@@ -364,7 +371,7 @@ namespace PetroClient
                 writer.WriteString(nodeData);
             }            
 
-            if (maxIndex > 0)
+            if (maxIndex > 0 && nodeData!="Index")
             {
                 writer.WriteStartElement("minIndex");
                 writer.WriteString(minIndex.ToString());
